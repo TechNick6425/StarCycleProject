@@ -1,0 +1,90 @@
+<html>
+
+	<head>
+
+		<title>Star Cycle - Nick Gauthier</title>
+
+		<link href="css/stylesheet.css" rel="stylesheet" type="text/css">
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+		<script src="js/sweetalert.min.js"></script>
+		<link href="css/sweetalert.css" rel="stylesheet" type="text/css">
+
+	</head>
+
+	<body>
+
+		<script>
+function toggleElement(e) {
+	if(e.style.display == "none") {
+		e.style.display = "block";
+
+		if(e.style.display != "block") {
+			swal("Error", "Could not set the object's style.", "error");
+		}
+	} else if(e.style.display == "block") {
+		e.style.display = "none";
+
+		if(e.style.display != "none") {
+			swal("Error", "Could not set the object's style.", "error");
+		}
+	} else {
+		swal("Error", "Could not match object's style to a pattern: " + e.style.display, "error");
+	}
+
+	console.log("Toggled element " + e);
+}
+
+		</script>
+
+		<div id="container">
+
+			<div id="header"><h1>Star Cycle - Nick Gauthier</h1></div>
+
+			<div id="sidebar">
+			<a href="all0.html"><div class="contentsub">Nebula</div></a>
+
+				<div class="content" onclick="toggleElement(document.getElementById('smallsub'));">Small Life Cycle</div>
+
+				<div id="smallsub" style="display: none;">
+					<a href="small0.html"><div class="contentsub">Brown Dwarf</div></a>
+				</div>
+
+				<div class="content" onclick="toggleElement(document.getElementById('mediumsub'));">Medium Life Cycle</div>
+
+				<div id="mediumsub" style="display: none;">
+					<a href="medium0.html"><div class="contentsub">Medium Stable State Star</div></a>
+					<a href="medium1.html"><div class="contentsub">Red Giant</div></a>
+					<a href="medium2.html"><div class="contentsub">Nova</div></a>
+					<a href="medium3.html"><div class="contentsub">White Dwarf</div></a>
+					<a href="medium4.html"><div class="contentsub">Black Dwarf</div></a>
+				</div>
+
+				<div class="content" onclick="toggleElement(document.getElementById('largesub'));">Large Life Cycle</div>
+
+				<div id="largesub" style="display: none;">
+					<a href="large0.html"><div class="contentsub">Large Stable State Star</div></a>
+					<a href="large1.html"><div class="contentsub">Red Super Giant</div></a>
+					<a href="large2.html"><div class="contentsub">Super Nova</div></a>
+					<a href="large3.html"><div class="contentsub">Black Hole</div></a>
+					<a href="large4.html"><div class="contentsub">Neutron Star</div></a>
+				</div>
+			</div>
+
+			<div id="content">
+			<a href="http://i.space.com/images/i/000/024/922/original/brown-dwarf-weather.jpg?1357691636"><img src="img/small0.jpg"></a>
+
+			<p><h1>Brown Dwarf</h1>
+			<h3>Life Cycle: Small</h3>
+			<h3>Elements Created: None</h3></p>
+
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;After a thin portion of a nebula gravitates together, a brown dwarf is formed. This "star" doesn't have enough mass to begin fusion, so it remains a brown dwarf forever.</p>
+
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;In rare cases, two or more brown dwarfs can collide and create a star with enough mass to start fusion. In this case, the star would now be classified under <a href="medium0.html">medium stable state star</a>.
+			</div>
+
+		</div>
+
+	</body>
+
+</html>
