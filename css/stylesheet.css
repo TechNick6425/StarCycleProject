@@ -1,5 +1,4 @@
 a {
-	color: white;
 	text-decoration: none;
 }
 
@@ -29,6 +28,10 @@ body {
 	background-color: #3f3f3f;
 	width: 200px;
 	height: 100%;
+}
+
+#sidebar a {
+	color: white;
 }
 
 #sidebar .content {
